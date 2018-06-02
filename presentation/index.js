@@ -80,10 +80,10 @@ export default class Presentation extends React.Component {
           lang="php"
           code={require("raw-loader!./code-examples/primitive/purchase-output.php")}
           ranges={[
-            { loc: [0, 11] },
-            { loc: [2, 3] },
-            { loc: [2, 3], note: "A success can also not be a success!" },
-            { loc: [6, 7], note: "This is fine" }
+            { loc: [0, 18] },
+            { loc: [4, 5] },
+            { loc: [4, 5], note: "A success can also not exist!" },
+            { loc: [9, 10], note: "This is fine" }
           ]}
         />
         <Slide transition={["fade"]} bgColor="tertiary">

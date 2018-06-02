@@ -1,6 +1,8 @@
 <?php
 
-if ($success == false) {
+include 'header.php';
+
+if (! isset($success)) {
 ?>
 <span style="color:red">Sorry, something went wrong</span>
 <?php
@@ -9,3 +11,8 @@ if ($success == false) {
 
 ?>
 <span>Thank you for your purchase!</span>
+
+<?php
+
+include 'product-details.php';
+include 'footer.php';
