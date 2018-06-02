@@ -11,16 +11,14 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Code,
+  CodePane
 } from "spectacle";
 
 import CodeSlide from "spectacle-code-slide";
 
-// Import theme
 import createTheme from "spectacle/lib/themes/default";
-
-// Require CSS
-require("normalize.css");
 
 window.Prism = require("prismjs");
 
@@ -28,7 +26,9 @@ const loadLanguages = require("prismjs/components/index");
 
 loadLanguages(["php", "haskell"]);
 
+require("normalize.css");
 require("prismjs/themes/prism.css");
+require("./index.css");
 
 const theme = createTheme({
   primary: "white",
@@ -43,7 +43,7 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+      <Deck transition={["none"]} transitionDuration={0} theme={theme} controls={false}>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
             Spectacle Boilerplate
@@ -54,10 +54,19 @@ export default class Presentation extends React.Component {
         </Slide>
         <CodeSlide
           lang="php"
-          code={require("raw-loader!../foo.php")}
+          code={require("raw-loader!./code-examples/primitive/register-globals.php")}
+          showLineNumbers={false}
           ranges={[
-            { loc: [1, 2], note: "AAA" },
-            { loc: [2, 3], note: "BBB" }
+            { loc: [0, 8] },
+            { loc: [6, 8], note: "Obviously." }
+          ]}
+        />
+        <CodeSlide
+          lang="php"
+          code={require("raw-loader!./code-examples/primitive/purchase.php")}
+          ranges={[
+            { loc: [2, 22] },
+            { loc: [3, 22] }
           ]}
         />
         <Slide transition={["fade"]} bgColor="tertiary">
