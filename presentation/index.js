@@ -56,6 +56,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           lang="php"
           code={require("raw-loader!./code-examples/primitive/purchase.php")}
+          showLineNumbers={false}
           ranges={[
             { loc: [2, 22] },
             { loc: [1, 3], note: "Security" },
@@ -71,6 +72,7 @@ export default class Presentation extends React.Component {
         <CodeSlide
           lang="php"
           code={require("raw-loader!./code-examples/primitive/purchase-output.php")}
+          showLineNumbers={false}
           ranges={[
             { loc: [0, 18] },
             { loc: [4, 5] },
