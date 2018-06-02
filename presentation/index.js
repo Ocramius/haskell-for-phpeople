@@ -43,7 +43,7 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["none"]} transitionDuration={0} theme={theme} controls={false}>
+      <Deck transition={["none"]} transitionDuration={0} theme={theme} controls={false} progress="none">
         <CodeSlide
           lang="php"
           code={require("raw-loader!./code-examples/primitive/register-globals.php")}
