@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   BlockQuote,
   Cite,
   Deck,
@@ -40,11 +41,24 @@ const theme = createTheme({
   secondary: "Helvetica"
 });
 
+const douchebagHat = require("../assets/scumbag-steve-douchebag-hat.png");
+
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["none"]} transitionDuration={0} theme={theme} controls={false} progress="none">
-
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  2002, first website project
+            {/* add acme pic */}
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  Our customer
+            {/* add coyote pic */}
+          </Heading>
+        </Slide>
         <Slide>
           <Heading size={4} fit caps lineHeight={1}>
             Unstructured code
@@ -116,6 +130,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={4} fit caps lineHeight={1}>
+                  Security issues
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
             Security? What security?
           </Heading>
         </Slide>
@@ -132,6 +151,65 @@ export default class Presentation extends React.Component {
             { loc: [1, 3], note: "The birth of helpers" }
           ]}
         />
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+            <Code>$GLOBALS</Code>
+          </Heading>
+          <Text>Getting things from "somewhere"</Text>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  Clients will pay...
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  ...for a rewrite
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  Then came the first frameworks
+          </Heading>
+          <Appear>
+            <Text>Framework authors "know" what they do</Text>
+          </Appear>
+        </Slide>
+
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  Concerns being separated
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  MVC
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  MVC-ish
+          </Heading>
+          <Text>MVC over HTTP is not really a thing</Text>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+                  Controllers
+          </Heading>
+        </Slide>
+        <Slide bgImage={douchebagHat}>
+          <Heading size={4} fit caps lineHeight={1} textColor="#ccc">
+                  Users:
+          </Heading>
+          <Text textColor="#ccc">LET'S PUT EVERYTHING IN A CONTROLLER!</Text>
+        </Slide>
+
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+            <Code>Registries</Code>
+          </Heading>
+          <Text>Not much better than globals...</Text>
+        </Slide>
       </Deck>
     );
   }
