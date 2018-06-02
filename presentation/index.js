@@ -66,7 +66,24 @@ export default class Presentation extends React.Component {
           code={require("raw-loader!./code-examples/primitive/purchase.php")}
           ranges={[
             { loc: [2, 22] },
-            { loc: [3, 22] }
+            { loc: [1, 3], note: "Security" },
+            { loc: [3, 7], note: "SQL skillz" },
+            { loc: [3, 7], note: "Forgot `or die(mysql_error());`!" },
+            { loc: [7, 9], note: "Input validation" },
+            { loc: [9, 10] },
+            { loc: [9, 10], note: "Imagine `$success = false;`!" },
+            { loc: [10, 14] },
+            { loc: [14, 19] }
+          ]}
+        />
+        <CodeSlide
+          lang="php"
+          code={require("raw-loader!./code-examples/primitive/purchase-output.php")}
+          ranges={[
+            { loc: [0, 11] },
+            { loc: [2, 3] },
+            { loc: [2, 3], note: "A success can also not be a success!" },
+            { loc: [6, 7], note: "This is fine" }
           ]}
         />
         <Slide transition={["fade"]} bgColor="tertiary">
