@@ -215,34 +215,34 @@ export default class Presentation extends React.Component {
                         Most basic security issues removed!
                     </Heading>
                     <List>
-                    <Appear>
-                        <ListItem>
-                            Rendering in <span className="good-green">views</span>,
-                            escaping fixes <span className="good-orange">XSS</span>
-                        </ListItem>
-                    </Appear>
-                    <Appear>
-                        <ListItem>
-                            Proper <span className="good-green">form validation</span>,
-                        </ListItem>
-                    </Appear>
-                    <Appear>
-                        <ListItem>
-                            <span className="good-green">CSRF</span> protection
-                        </ListItem>
-                    </Appear>
-                    <Appear>
-                        <ListItem>
-                            <span className="good-green">SQL</span> abstractions,
-                            removed most <span className="good-orange">SQL injections</span>
-                        </ListItem>
-                    </Appear>
-                    <Appear>
-                        <ListItem>
-                            <span className="good-green">Mailer</span> abstractions,
-                            removed most <span className="good-orange">SMTP header injections</span>
-                        </ListItem>
-                    </Appear>
+                        <Appear>
+                            <ListItem>
+                                Rendering in <span className="good-green">views</span>,
+                                escaping fixes <span className="good-orange">XSS</span>
+                            </ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>
+                                Proper <span className="good-green">form validation</span>,
+                            </ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>
+                                <span className="good-green">CSRF</span> protection
+                            </ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>
+                                <span className="good-green">SQL</span> abstractions,
+                                removed most <span className="good-orange">SQL injections</span>
+                            </ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>
+                                <span className="good-green">Mailer</span> abstractions,
+                                removed most <span className="good-orange">SMTP header injections</span>
+                            </ListItem>
+                        </Appear>
                     </List>
                 </Slide>
                 <Slide bgImage={douchebagHat}>
