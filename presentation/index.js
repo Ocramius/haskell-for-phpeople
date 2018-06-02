@@ -267,9 +267,27 @@ export default class Presentation extends React.Component {
                 />
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        <Code>Registries</Code>
+                        Registries
                     </Heading>
                     <Text>Not much better than globals...</Text>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Anyone recognize this?
+                    </Heading>
+                </Slide>
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/framework/larval/facade.php")}
+                    showLineNumbers
+                    ranges={[
+                        {loc: [237, 256]},
+                    ]}
+                />
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Tip: it's not from 2007.
+                    </Heading>
                 </Slide>
             </Deck>
         );
