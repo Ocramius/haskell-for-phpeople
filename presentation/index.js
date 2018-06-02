@@ -248,7 +248,7 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        <Code>We still heavily rely on helpers</Code>
+                        We still heavily rely on helpers
                     </Heading>
                 </Slide>
 
