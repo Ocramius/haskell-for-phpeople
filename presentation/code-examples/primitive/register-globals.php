@@ -2,7 +2,7 @@
 
 include 'functions.php.inc';
 
-// register_globals polyfill
+// register globals
 foreach ($_REQUEST as $var => $value) {
     $$var = $value;
 }
