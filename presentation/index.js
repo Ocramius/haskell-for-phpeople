@@ -44,6 +44,19 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["none"]} transitionDuration={0} theme={theme} controls={false} progress="none">
+
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+            Unstructured code
+          </Heading>
+        </Slide>
+        <Slide bgColor={"#000"}>
+          <Heading size={4} fit caps lineHeight={1} style={"color: red"}>
+            WARNING
+          </Heading>
+          <Text textColor="white">The following content may contain elements that are not suitable for some audiences.</Text>
+          <Text textColor="white">Accordingly, viewer discretion is advised </Text>
+        </Slide>
         <CodeSlide
           lang="php"
           code={require("raw-loader!./code-examples/primitive/register-globals.php")}
@@ -78,6 +91,45 @@ export default class Presentation extends React.Component {
             { loc: [4, 5] },
             { loc: [4, 5], note: "A success can also not exist!" },
             { loc: [9, 10], note: "This is fine" }
+          ]}
+        />
+        <CodeSlide
+          lang="php"
+          code={require("raw-loader!./code-examples/primitive/purchase-output.php")}
+          showLineNumbers={false}
+          ranges={[
+            { loc: [0, 18] },
+            { loc: [4, 5] },
+            { loc: [4, 5], note: "A success can also not exist!" },
+            { loc: [9, 10], note: "This is fine" }
+          ]}
+        />
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+            Projects used to be "easy"
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+            Relaxed requirements
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+            Security? What security?
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={4} fit caps lineHeight={1}>
+            Gets the job done
+          </Heading>
+        </Slide>
+        <CodeSlide
+          lang="php"
+          code={require("raw-loader!./code-examples/primitive/register-globals.php")}
+          showLineNumbers={false}
+          ranges={[
+            { loc: [1, 3], note: "The birth of helpers" }
           ]}
         />
       </Deck>
