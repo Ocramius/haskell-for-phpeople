@@ -1,7 +1,7 @@
 // Import React
 import React from "react";
 // Import Spectacle Core tags
-import { Appear, Code, Deck, Heading, Slide, Text, List, ListItem } from "spectacle";
+import { Appear, BlockQuote, Cite, Code, Deck, Heading, List, ListItem, Quote, Slide, Text } from "spectacle";
 
 import CodeSlide from "spectacle-code-slide";
 
@@ -496,6 +496,51 @@ export default class Presentation extends React.Component {
                     <Heading size={4} fit caps lineHeight={1}>
                         Pushing <span className="good-green">functional programming</span>
                     </Heading>
+                </Slide>
+                <Slide>
+                    <Text>
+                        A class
+                        with <Code>__construct</Code> and <Code>__invoke</Code> is
+                        a <span className="good-green">curried function</span>
+                    </Text>
+                </Slide>
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/RegisterUser.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 14] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 14] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user_curried.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 14] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <Slide>
+                    <BlockQuote>
+                        <Quote textColor="#000">Good object oriented programming is functional programming</Quote>
+                        <Cite>Anthony Ferrara</Cite>
+                    </BlockQuote>
                 </Slide>
             </Deck>
         );
