@@ -28,6 +28,8 @@ const theme = createTheme({
 });
 
 const douchebagHat = require("../assets/scumbag-steve-douchebag-hat.png");
+const httpMiddlewareWorkflow = require("../assets/http-middleworld.png");
+const frameworkAsFrameWork = require("../assets/framework-as-frame-work.jpg");
 
 export default class Presentation extends React.Component {
     render() {
@@ -330,6 +332,169 @@ export default class Presentation extends React.Component {
                         { loc: [29, 47], note: "No magic" },
                     ]}
                 />
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Progress!
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Still a lot of framework <span className="good-orange">coupling</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        <span className="good-green">Upgrade</span> = <span className="good-orange">rewrite</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        The rise of <span className="good-green">DDD</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        The rise of <span className="good-green">DI</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        The rise of <span className="good-green">DDD</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        The rise of <span className="good-green">ORM</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Another evolution
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Middleware
+                    </Heading>
+                    <Appear>
+                        <Text>We're doing HTTP stuff anyway</Text>
+                    </Appear>
+                </Slide>
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/framework/expressive/PurchaseAction.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 34] },
+                        { loc: [21, 22], note: "Request in, response out" },
+                        { loc: [21, 33], note: "Just the actual action" },
+                    ]}
+                />
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/framework/expressive/OnlyCoyotes.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 26] },
+                        { loc: [18, 22], note: "Intercept only when needed" },
+                        { loc: [23, 24], note: "Delegate everything else" },
+                    ]}
+                />
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/framework/expressive/OnlyAuthenticated.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 29] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/framework/expressive/OnlyWithValidFormData.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 27] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/framework/expressive/pipeline.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 8] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/framework/expressive/pipeline.hs")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 6] }
+                    ]}
+                />
+                <Slide bgImage={httpMiddlewareWorkflow}/>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        What survived:
+                    </Heading>
+                    <List>
+                        <Appear>
+                            <ListItem>PSR-0</ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>PSR-7</ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>PSR-11</ListItem>
+                        </Appear>
+                        <Appear>
+                            <ListItem>PSR-15</ListItem>
+                        </Appear>
+                    </List>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Kill the <span className="good-orange">framework</span>!
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Fighting framework <span className="good-orange">coupling</span>
+                    </Heading>
+                    <Appear>
+                        <Text>No framework in those middleware</Text>
+                    </Appear>
+                </Slide>
+                <Slide>
+                    <Heading size={5} fit caps lineHeight={1}>
+                        "<span className="good-orange">Framework</span>"
+                        <br/>
+                        back to
+                        <br/>
+                        "<span className="good-green">Frame</span>" "<span className="good-green">work</span>"
+                    </Heading>
+                </Slide>
+                <Slide bgImage={frameworkAsFrameWork}/>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Reduce the <span className="good-green">risk</span> of another <span className="good-orange">rewrite</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Pushing <span className="good-green">immutability</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Pushing <span className="good-green">value objects</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Pushing <span className="good-green">functional programming</span>
+                    </Heading>
+                </Slide>
             </Deck>
         );
     }
