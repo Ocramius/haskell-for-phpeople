@@ -30,6 +30,7 @@ const theme = createTheme({
 const douchebagHat = require("../assets/scumbag-steve-douchebag-hat.png");
 const httpMiddlewareWorkflow = require("../assets/http-middleworld.png");
 const frameworkAsFrameWork = require("../assets/framework-as-frame-work.jpg");
+const leapOfFaith = require("../assets/leap-of-faith.jpg");
 
 export default class Presentation extends React.Component {
     render() {
@@ -431,7 +432,8 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/framework/expressive/pipeline.hs")}
                     showLineNumbers
                     ranges={[
-                        { loc: [0, 6] }
+                        { loc: [0, 6] },
+                        { loc: [4, 5], note: "Want to write an API? Change this line." }
                     ]}
                 />
                 <Slide bgImage={httpMiddlewareWorkflow}/>
@@ -578,7 +580,66 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
+                        Pushing <span className="good-green">functional patterns</span> to the <span className="good-orange">storage</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        <span className="good-green">Event Sourcing</span>
+                    </Heading>
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/event-sourcing/event-sourcing.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 1] },
+                        { loc: [0, 5] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/event-sourcing/purchase-event-sourced.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 11] },
+                        { loc: [0, 1], note: "This is an HTTP application" },
+                        { loc: [2, 4], note: "Data flows from one function to the next" },
+                        { loc: [3, 5], note: "Data flows from one function to the next" },
+                        { loc: [4, 6], note: "Data flows from one function to the next" },
+                        { loc: [5, 7], note: "Data flows from one function to the next" },
+                        { loc: [6, 8], note: "Data flows from one function to the next" },
+                        { loc: [7, 9], note: "Data flows from one function to the next" },
+                        { loc: [8, 10], note: "Data flows from one function to the next" },
+                        { loc: [9, 11], note: "Data flows from one function to the next" },
+                    ]}
+                />
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        There's no more space for <span className="good-orange">service location</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
                         There's no more space for <span className="good-orange">helpers</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Most <span className="good-orange">cross-cutting concerns</span> are <span className="good-green">function composition</span>
+                    </Heading>
+                    <Appear>
+                        <Text>Most if/else is gone or isolated!</Text>
+                    </Appear>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        There's no more space for <span className="good-orange">shared mutable state</span>
+                    </Heading>
+                </Slide>
+                <Slide bgImage={leapOfFaith}>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        What's the next jump?
                     </Heading>
                 </Slide>
             </Deck>
