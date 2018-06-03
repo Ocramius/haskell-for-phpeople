@@ -291,6 +291,26 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
+                        Too much <span className="good-orange">coupling</span> with the framework
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Singleton <span className="good-green">framework kernel</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Forced <span className="good-green">0-argument constructors</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        <span className="good-green">Autoloading</span> as service-location
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
                         Then we evolved again
                     </Heading>
                     <Appear>
