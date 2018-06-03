@@ -1,7 +1,7 @@
 // Import React
 import React from "react";
 // Import Spectacle Core tags
-import {Appear, Code, Deck, Heading, Slide, Text, List, ListItem} from "spectacle";
+import { Appear, Code, Deck, Heading, Slide, Text, List, ListItem } from "spectacle";
 
 import CodeSlide from "spectacle-code-slide";
 
@@ -63,8 +63,8 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/primitive/register-globals.php")}
                     showLineNumbers={false}
                     ranges={[
-                        {loc: [0, 8]},
-                        {loc: [6, 8], note: "Obviously."}
+                        { loc: [0, 8] },
+                        { loc: [6, 8], note: "Obviously." }
                     ]}
                 />
                 <CodeSlide
@@ -72,15 +72,15 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/primitive/purchase.php")}
                     showLineNumbers={false}
                     ranges={[
-                        {loc: [2, 22]},
-                        {loc: [1, 3], note: "Security"},
-                        {loc: [3, 7], note: "SQL skillz"},
-                        {loc: [3, 7], note: "Forgot `or die(mysql_error());`!"},
-                        {loc: [7, 9], note: "Input validation"},
-                        {loc: [9, 10]},
-                        {loc: [9, 10], note: "Imagine `$success = false;`!"},
-                        {loc: [10, 14]},
-                        {loc: [14, 19]}
+                        { loc: [2, 22] },
+                        { loc: [1, 3], note: "Security" },
+                        { loc: [3, 7], note: "SQL skillz" },
+                        { loc: [3, 7], note: "Forgot `or die(mysql_error());`!" },
+                        { loc: [7, 9], note: "Input validation" },
+                        { loc: [9, 10] },
+                        { loc: [9, 10], note: "Imagine `$success = false;`!" },
+                        { loc: [10, 14] },
+                        { loc: [14, 19] }
                     ]}
                 />
                 <CodeSlide
@@ -88,10 +88,10 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/primitive/purchase-output.php")}
                     showLineNumbers={false}
                     ranges={[
-                        {loc: [0, 18]},
-                        {loc: [4, 5]},
-                        {loc: [4, 5], note: "A success can also not exist!"},
-                        {loc: [9, 10], note: "This is fine"}
+                        { loc: [0, 18] },
+                        { loc: [4, 5] },
+                        { loc: [4, 5], note: "A success can also not exist!" },
+                        { loc: [9, 10], note: "This is fine" }
                     ]}
                 />
                 <CodeSlide
@@ -99,10 +99,10 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/primitive/purchase-output.php")}
                     showLineNumbers={false}
                     ranges={[
-                        {loc: [0, 18]},
-                        {loc: [4, 5]},
-                        {loc: [4, 5], note: "A success can also not exist!"},
-                        {loc: [9, 10], note: "This is fine"}
+                        { loc: [0, 18] },
+                        { loc: [4, 5] },
+                        { loc: [4, 5], note: "A success can also not exist!" },
+                        { loc: [9, 10], note: "This is fine" }
                     ]}
                 />
                 <Slide>
@@ -135,7 +135,7 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/primitive/register-globals.php")}
                     showLineNumbers={false}
                     ranges={[
-                        {loc: [1, 3], note: "The birth of helpers"}
+                        { loc: [1, 3], note: "The birth of helpers" }
                     ]}
                 />
                 <Slide>
@@ -195,14 +195,14 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/framework/zf1/controller.php")}
                     showLineNumbers
                     ranges={[
-                        {loc: [0, 26]},
-                        {loc: [0, 4], note: "Always extend from the framework"},
-                        {loc: [0, 4], note: "(for maximum coupling)"},
-                        {loc: [4, 5], note: "Our action has a name!"},
-                        {loc: [6, 9], note: "(some) security!"},
-                        {loc: [10, 17], note: "Data validation, done properly"},
-                        {loc: [18, 20], note: "Database abstractions"},
-                        {loc: [23, 24], note: "Rendering is done somewhere else"}
+                        { loc: [0, 26] },
+                        { loc: [0, 4], note: "Always extend from the framework" },
+                        { loc: [0, 4], note: "(for maximum coupling)" },
+                        { loc: [4, 5], note: "Our action has a name!" },
+                        { loc: [6, 9], note: "(some) security!" },
+                        { loc: [10, 17], note: "Data validation, done properly" },
+                        { loc: [18, 20], note: "Database abstractions" },
+                        { loc: [23, 24], note: "Rendering is done somewhere else" }
                     ]}
                 />
                 <Slide>
@@ -262,7 +262,7 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/framework/zf1/base-controller.php")}
                     showLineNumbers
                     ranges={[
-                        {loc: [0, 9]},
+                        { loc: [0, 9] }
                     ]}
                 />
                 <Slide>
@@ -281,13 +281,21 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/framework/larval/facade.php")}
                     showLineNumbers
                     ranges={[
-                        {loc: [237, 256]},
+                        { loc: [237, 256] }
                     ]}
                 />
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Tip: it's not from 2007.
                     </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Then we evolved again
+                    </Heading>
+                    <Appear>
+                        <Text>Around 2011~2012</Text>
+                    </Appear>
                 </Slide>
             </Deck>
         );
