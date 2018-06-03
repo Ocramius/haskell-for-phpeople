@@ -395,9 +395,9 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/framework/expressive/OnlyCoyotes.php")}
                     showLineNumbers
                     ranges={[
-                        { loc: [0, 26] },
-                        { loc: [18, 22], note: "Intercept only when needed" },
-                        { loc: [23, 24], note: "Delegate everything else" },
+                        { loc: [0, 28] },
+                        { loc: [18, 24], note: "Intercept only when needed" },
+                        { loc: [25, 26], note: "Delegate everything else" },
                     ]}
                 />
                 <CodeSlide
@@ -405,7 +405,8 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/framework/expressive/OnlyAuthenticated.php")}
                     showLineNumbers
                     ranges={[
-                        { loc: [0, 29] }
+                        { loc: [0, 33] },
+                        { loc: [17, 32] }
                     ]}
                 />
                 <CodeSlide
@@ -413,7 +414,8 @@ export default class Presentation extends React.Component {
                     code={require("raw-loader!./code-examples/framework/expressive/OnlyWithValidFormData.php")}
                     showLineNumbers
                     ranges={[
-                        { loc: [0, 27] }
+                        { loc: [0, 29] },
+                        { loc: [15, 28] }
                     ]}
                 />
                 <CodeSlide

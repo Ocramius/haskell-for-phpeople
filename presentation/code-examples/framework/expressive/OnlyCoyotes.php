@@ -17,8 +17,10 @@ class OnlyCoyotes
         $user = $request->getAttribute('user');
 
         if (! ($user instanceof $user && $user->isCoyote())) {
-            return $this->renderer->render(self::class, ['coyote' => false])
-                                  ->withResponseCode(403);
+            return $this
+                ->renderer
+                ->render(self::class, ['coyote' => false])
+                ->withResponseCode(403);
         }
 
         return $next($request);

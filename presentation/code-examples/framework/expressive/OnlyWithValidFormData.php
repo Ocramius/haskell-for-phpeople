@@ -18,8 +18,10 @@ class OnlyWithValidFormData
         list ($invalid, $valid) = $this->form->validate($this->request);
 
         if ($invalid) {
-            return $this->renderer->render(self::class, ['invalid' => $invalid])
-                                  ->withResponseCode(422);
+            return $this
+                ->renderer
+                ->render(self::class, ['invalid' => $invalid])
+                ->withResponseCode(422);
         }
 
         return $next($request->withAttribute('validatedFormData', $valid));

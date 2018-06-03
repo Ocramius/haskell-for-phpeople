@@ -9,3 +9,7 @@
 .good-orange {
     color: #FC6A31;
 }
+
+.spectacle-content > pre {
+    padding: 15% 0 !important;
+}

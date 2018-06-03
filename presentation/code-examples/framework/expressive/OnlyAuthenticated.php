@@ -17,11 +17,15 @@ class OnlyAuthenticated
 
     public function __invoke(Request $request, callable $next) : Response
     {
-        $user = $this->authentication->userForCookie($request->getHeader('Cookie'));
+        $user = $this->authentication->userForCookie(
+            $request->getHeader('Cookie')
+        );
 
         if (! $user) {
-            return $this->renderer->render(self::class, ['authenticated' => false])
-                                  ->withResponseCode(401);
+            return $this
+                ->renderer
+                ->render(self::class, ['authenticated' => false])
+                ->withResponseCode(401);
         }
 
         return $next($request->withAttribute('user', $user));
