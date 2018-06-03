@@ -317,6 +317,19 @@ export default class Presentation extends React.Component {
                         <Text>Around 2011~2012</Text>
                     </Appear>
                 </Slide>
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/framework/zf2/controller.php")}
+                    showLineNumbers
+                    ranges={[
+                        { loc: [0, 48] },
+                        { loc: [4, 14], note: "Make the implicit explicit" },
+                        { loc: [15, 28], note: "Services built before runtime" },
+                        { loc: [29, 47], note: "Statically analysable code" },
+                        { loc: [29, 47], note: "Testable code" },
+                        { loc: [29, 47], note: "No magic" },
+                    ]}
+                />
             </Deck>
         );
     }
