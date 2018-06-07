@@ -39,13 +39,12 @@ export default class Presentation extends React.Component {
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         2002, first website project
-                        {/* add acme pic */}
                     </Heading>
                 </Slide>
-                <Slide>
+                <Slide bgImage={require("../assets/acme-inc-services.png")}/>
+                <Slide bgImage={require("../assets/coyote-roadrunner.png")}>
                     <Heading size={4} fit caps lineHeight={1}>
-                        Our customer
-                        {/* add coyote pic */}
+                        {/* Our customer */}
                     </Heading>
                 </Slide>
                 <Slide>
@@ -104,17 +103,17 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        Relaxed requirements
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
                         Security issues
                     </Heading>
                 </Slide>
+                <Slide bgImage={require("../assets/lock-fail.jpg")}>
+                    <Heading size={4} fit caps lineHeight={1} textColor="white">
+                        Security? What security?
+                    </Heading>
+                </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        Security? What security?
+                        Relaxed requirements
                     </Heading>
                 </Slide>
                 <Slide>
@@ -136,13 +135,13 @@ export default class Presentation extends React.Component {
                     </Heading>
                     <Text>Getting things from "somewhere"</Text>
                 </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
+                <Slide bgImage={require("../assets/mr-crabs-money-eyes.png")}>
+                    <Heading size={4} fit caps lineHeight={1} textColor="white">
                         Clients will pay...
                     </Heading>
                 </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
+                <Slide bgImage={require("../assets/customer-rewrite.jpg")}>
+                    <Heading size={4} fit caps lineHeight={1} textColor="white">
                         ...for a rewrite
                     </Heading>
                 </Slide>
@@ -155,9 +154,11 @@ export default class Presentation extends React.Component {
                     <Heading size={4} fit caps lineHeight={1}>
                         Then came the first frameworks
                     </Heading>
-                    <Appear>
-                        <Text>Framework authors "know" what they do</Text>
-                    </Appear>
+                </Slide>
+                <Slide bgImage={require("../assets/dr-evil-quotes.jpg")}>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Framework authors "know" what they do
+                    </Heading>
                 </Slide>
 
                 <Slide>
@@ -215,7 +216,7 @@ export default class Presentation extends React.Component {
                         </Appear>
                         <Appear>
                             <ListItem>
-                                Proper <span className="good-green">form validation</span>,
+                                Proper <span className="good-green">form validation</span>
                             </ListItem>
                         </Appear>
                         <Appear>
@@ -301,6 +302,11 @@ export default class Presentation extends React.Component {
                         <span className="good-green">Autoloading</span> as service-location
                     </Heading>
                 </Slide>
+                <Slide bgImage={require("../assets/not-testable.jpg")}>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Testing
+                    </Heading>
+                </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Then we evolved again
@@ -339,7 +345,7 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        The rise of <span className="good-green">DDD</span>
+                        The rise of <span className="good-green">TDD</span>
                     </Heading>
                 </Slide>
                 <Slide>
@@ -419,7 +425,7 @@ export default class Presentation extends React.Component {
                 <CodeSlide
                     lang="haskell"
                     code={require("raw-loader!./code-examples/framework/expressive/pipeline.hs")}
-                    showLineNumbers
+                    showLineNumbers={false}
                     ranges={[
                         { loc: [0, 6] },
                         { loc: [4, 5], note: "Want to write an API? Change this line." }
@@ -445,8 +451,8 @@ export default class Presentation extends React.Component {
                         </Appear>
                     </List>
                 </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
+                <Slide bgImage={require("../assets/destroy-the-framework.jpg")}>
+                    <Heading size={4} fit caps lineHeight={1} className="stroke-text">
                         Kill the <span className="good-orange">framework</span>!
                     </Heading>
                 </Slide>
@@ -512,6 +518,14 @@ export default class Presentation extends React.Component {
                         </Text>
                     </Appear>
                 </Slide>
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/value-object/check_password.php")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 8] },
+                    ]}
+                />
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Maybe <span className="good-green">generics</span>?
@@ -605,17 +619,17 @@ export default class Presentation extends React.Component {
                 />
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        There's no more space for <span className="good-orange">service location</span>
+                        No more <span className="good-orange">service location</span>
                     </Heading>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        There's no more space for <span className="good-orange">helpers</span>
+                        No more <span className="good-orange">helpers</span>
                     </Heading>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        Most <span className="good-orange">cross-cutting concerns</span> are <span className="good-green">function composition</span>
+                        <span className="good-orange">cross-cutting concerns</span> =&gt; <span className="good-green">function composition</span>
                     </Heading>
                     <Appear>
                         <Text>Most if/else is gone or isolated!</Text>
@@ -623,7 +637,7 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        There's no more space for <span className="good-orange">shared mutable state</span>
+                        No more <span className="good-orange">shared mutable state</span>
                     </Heading>
                 </Slide>
                 <Slide bgImage={leapOfFaith}>

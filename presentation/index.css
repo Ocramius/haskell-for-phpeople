@@ -13,3 +13,8 @@
 .spectacle-content > pre {
     padding: 15% 0 !important;
 }
+
+.stroke-text {
+    -webkit-text-stroke-width: 0.005em;
+    -webkit-text-stroke-color: #fff;
+}
