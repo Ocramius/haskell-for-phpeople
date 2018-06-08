@@ -576,12 +576,6 @@ export default class Presentation extends React.Component {
                     ]}
                 />
                 <Slide>
-                    <BlockQuote>
-                        <Quote textColor="#000">Good object oriented programming is functional programming</Quote>
-                        <Cite>Anthony Ferrara</Cite>
-                    </BlockQuote>
-                </Slide>
-                <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Pushing <span className="good-green">functional patterns</span> to the <span className="good-orange">storage</span>
                     </Heading>
@@ -639,6 +633,12 @@ export default class Presentation extends React.Component {
                     <Heading size={4} fit caps lineHeight={1}>
                         No more <span className="good-orange">shared mutable state</span>
                     </Heading>
+                </Slide>
+                <Slide>
+                    <BlockQuote>
+                        <Quote textColor="#000">Good object oriented programming is functional programming</Quote>
+                        <Cite>Anthony Ferrara</Cite>
+                    </BlockQuote>
                 </Slide>
                 <Slide bgImage={leapOfFaith}>
                     <Heading size={4} fit caps lineHeight={1}>
