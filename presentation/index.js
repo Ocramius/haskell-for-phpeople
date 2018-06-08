@@ -415,34 +415,28 @@ export default class Presentation extends React.Component {
                         What survived:
                     </Heading>
                     <List>
-                        <Appear>
-                            <ListItem>PSR-0</ListItem>
-                        </Appear>
-                        <Appear>
-                            <ListItem>PSR-7</ListItem>
-                        </Appear>
-                        <Appear>
-                            <ListItem>PSR-11</ListItem>
-                        </Appear>
-                        <Appear>
-                            <ListItem>PSR-15</ListItem>
-                        </Appear>
+                        <ListItem>PSR-0</ListItem>
+                        <ListItem>PSR-7</ListItem>
+                        <ListItem>PSR-11</ListItem>
+                        <ListItem>PSR-15</ListItem>
                     </List>
                 </Slide>
                 <Slide bgImage={require("../assets/destroy-the-framework.jpg")}>
-                    <Heading size={4} fit caps lineHeight={1} className="stroke-text">
-                        Kill the <span className="good-orange">framework</span>!
+                    <Heading size={6} fit caps lineHeight={1} className="stroke-text">
+                        Kill
+                        <br/>
+                        the
+                        <br/>
+                        <span className="good-orange">framework</span>!
                     </Heading>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Fighting framework <span className="good-orange">coupling</span>
                     </Heading>
-                    <Appear>
-                        <Text>No framework in those middleware</Text>
-                    </Appear>
+                    <Text>No framework in those middleware</Text>
                 </Slide>
-                <Slide>
+                <Slide bgImage={frameworkAsFrameWork} className="stroke-text">
                     <Heading size={5} fit caps lineHeight={1}>
                         "<span className="good-orange">Framework</span>"
                         <br/>
@@ -451,7 +445,6 @@ export default class Presentation extends React.Component {
                         "<span className="good-green">Frame</span>" "<span className="good-green">work</span>"
                     </Heading>
                 </Slide>
-                <Slide bgImage={frameworkAsFrameWork}/>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Reduce the <span className="good-green">risk</span> of another <span className="good-orange">rewrite</span>
@@ -467,14 +460,9 @@ export default class Presentation extends React.Component {
                         Pushing <span className="good-green">value objects</span>
                     </Heading>
                 </Slide>
-                <Slide>
+                <Slide bgImage={require("../assets/shapes-types.jpg")} className="stroke-text">
                     <Heading size={4} fit caps lineHeight={1}>
-                        Explicit, typed, well defined <span className="good-green">services</span> instead
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Typed: values as <span className="good-green">value objects</span>
+                        <span className="good-green">Typed</span>: values as <span className="good-green">value objects</span>
                     </Heading>
                 </Slide>
                 <CodeSlide
@@ -486,16 +474,6 @@ export default class Presentation extends React.Component {
                         { loc: [11, 12], note: "Invariants encapsulated" }
                     ]}
                 />
-                <Slide>
-                    <Text>
-                        Static analysis saves you time and hair!
-                    </Text>
-                    <Appear>
-                        <Text>
-                            PHPStan, Psalm, Exakat...
-                        </Text>
-                    </Appear>
-                </Slide>
                 <CodeSlide
                     lang="php"
                     code={require("raw-loader!./code-examples/value-object/check_password.php")}
@@ -506,8 +484,19 @@ export default class Presentation extends React.Component {
                 />
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
+                        <span className="good-orange">Static</span> <span className="good-green">analysis</span>
+                    </Heading>
+                    <Text>
+                        PHPStan, Psalm, Exakat...
+                    </Text>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
                         Maybe <span className="good-green">generics</span>?
                     </Heading>
+                    <Appear>
+                        <Text>See what I did there?</Text>
+                    </Appear>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
@@ -572,6 +561,11 @@ export default class Presentation extends React.Component {
                         { loc: [0, 5] }
                     ]}
                 />
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Death of <span className="good-orange">ORM</span>s?
+                    </Heading>
+                </Slide>
                 <CodeSlide
                     lang="haskell"
                     code={require("raw-loader!./code-examples/event-sourcing/purchase-event-sourced.hs")}
@@ -600,8 +594,12 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-orange">cross-cutting concerns</span> =&gt; <span className="good-green">function composition</span>
+                    <Heading size={5} fit caps lineHeight={1}>
+                        <span className="good-orange">cross-cutting concerns</span>
+                        <br/>
+                        become
+                        <br/>
+                        <span className="good-green">function composition</span>
                     </Heading>
                     <Appear>
                         <Text>Most if/else is gone or isolated!</Text>
