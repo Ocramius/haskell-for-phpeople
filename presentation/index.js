@@ -35,7 +35,7 @@ const leapOfFaith = require("../assets/leap-of-faith.jpg");
 export default class Presentation extends React.Component {
     render() {
         return (
-            <Deck transition={["none"]} transitionDuration={0} theme={theme} controls={false} progress="none">
+            <Deck transition={["none"]} transitionDuration={0} theme={theme} progress="none">
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         2002, first website project
@@ -96,28 +96,18 @@ export default class Presentation extends React.Component {
                         { loc: [8, 9], note: "This is fine" }
                     ]}
                 />
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Projects used to be "easy"
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Security issues
-                    </Heading>
-                </Slide>
                 <Slide bgImage={require("../assets/lock-fail.jpg")}>
-                    <Heading size={4} fit caps lineHeight={1} textColor="white">
+                    <Heading size={4} fit caps lineHeight={1} className="stroke-text-black">
                         Security? What security?
                     </Heading>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        Relaxed requirements
+                        Projects used to be "easy"
                     </Heading>
                 </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
+                <Slide bgImage={require("../assets/safety-fail.jpg")}>
+                    <Heading size={4} fit caps lineHeight={1} className="stroke-text-black">
                         Gets the job done
                     </Heading>
                 </Slide>
@@ -136,11 +126,11 @@ export default class Presentation extends React.Component {
                     <Text>Getting things from "somewhere"</Text>
                 </Slide>
                 <Slide bgImage={require("../assets/mr-crabs-money-eyes.png")}>
-                    <Heading size={4} fit caps lineHeight={1} textColor="white">
+                    <Heading size={4} fit caps lineHeight={1} textColor="white" className="stroke-text-black">
                         Clients will pay...
                     </Heading>
                 </Slide>
-                <Slide bgImage={require("../assets/customer-rewrite.jpg")}>
+                <Slide bgImage={require("../assets/customer-rewrite.jpg")} className="stroke-text-black">
                     <Heading size={4} fit caps lineHeight={1} textColor="white">
                         ...for a rewrite
                     </Heading>
@@ -156,8 +146,8 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
                 <Slide bgImage={require("../assets/dr-evil-quotes.jpg")}>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Framework authors "know" what they do
+                    <Heading size={5} fit caps lineHeight={1} className="stroke-text">
+                        Framework authors<br/>"know" what they do
                     </Heading>
                 </Slide>
 
@@ -208,48 +198,29 @@ export default class Presentation extends React.Component {
                         Most basic security issues removed!
                     </Heading>
                     <List>
-                        <Appear>
-                            <ListItem>
-                                Rendering in <span className="good-green">views</span>,
-                                escaping fixes <span className="good-orange">XSS</span>
-                            </ListItem>
-                        </Appear>
-                        <Appear>
-                            <ListItem>
-                                Proper <span className="good-green">form validation</span>
-                            </ListItem>
-                        </Appear>
-                        <Appear>
-                            <ListItem>
-                                <span className="good-green">CSRF</span> protection
-                            </ListItem>
-                        </Appear>
-                        <Appear>
-                            <ListItem>
-                                <span className="good-green">SQL</span> abstractions,
-                                removed most <span className="good-orange">SQL injections</span>
-                            </ListItem>
-                        </Appear>
-                        <Appear>
-                            <ListItem>
-                                <span className="good-green">Mailer</span> abstractions,
-                                removed most <span className="good-orange">SMTP header injections</span>
-                            </ListItem>
-                        </Appear>
+                        <ListItem>
+                            <span className="good-green">escaping</span> =&gt;
+                            <span className="good-orange">XSS</span>
+                        </ListItem>
+                        <ListItem>
+                            <span className="good-green">form</span> =&gt; <span className="good-orange">validation</span>
+                        </ListItem>
+                        <ListItem>
+                            <span className="good-green">tokens</span> =&gt; <span className="good-orange">CSRF</span>
+                        </ListItem>
+                        <ListItem>
+                            <span className="good-green">DAL</span> =&gt; <span className="good-orange">SQL Injections</span>
+                        </ListItem>
+                        <ListItem>
+                            <span className="good-green">Mailer</span> =&gt; <span className="good-orange">SMTP Injections</span>
+                        </ListItem>
                     </List>
-                </Slide>
-                <Slide bgImage={douchebagHat}>
-                    <Heading size={4} fit caps lineHeight={1} textColor="#ccc">
-                        Users:
-                    </Heading>
-                    <Text textColor="#ccc">LET'S PUT EVERYTHING IN A CONTROLLER!</Text>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         We still heavily rely on helpers
                     </Heading>
                 </Slide>
-
                 <CodeSlide
                     lang="php"
                     code={require("raw-loader!./code-examples/framework/zf1/base-controller.php")}
@@ -282,6 +253,12 @@ export default class Presentation extends React.Component {
                         Tip: it's not from 2007.
                     </Heading>
                 </Slide>
+                <Slide bgImage={douchebagHat} className="stroke-text">
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Users:
+                    </Heading>
+                    <Text textColor="#ccc">LET'S PUT EVERYTHING IN A CONTROLLER!</Text>
+                </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Too much <span className="good-orange">coupling</span> with the framework
@@ -302,7 +279,7 @@ export default class Presentation extends React.Component {
                         <span className="good-green">Autoloading</span> as service-location
                     </Heading>
                 </Slide>
-                <Slide bgImage={require("../assets/not-testable.jpg")}>
+                <Slide bgImage={require("../assets/not-testable.jpg")} className="stroke-text">
                     <Heading size={4} fit caps lineHeight={1}>
                         Testing
                     </Heading>
@@ -311,9 +288,7 @@ export default class Presentation extends React.Component {
                     <Heading size={4} fit caps lineHeight={1}>
                         Then we evolved again
                     </Heading>
-                    <Appear>
-                        <Text>Around 2011~2012</Text>
-                    </Appear>
+                    <Text>Around 2011~2012</Text>
                 </Slide>
                 <CodeSlide
                     lang="php"
@@ -345,22 +320,27 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        The rise of <span className="good-green">TDD</span>
+                        The rise of...
                     </Heading>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        The rise of <span className="good-green">DI</span>
+                        <span className="good-green">DI</span>
                     </Heading>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        The rise of <span className="good-green">DDD</span>
+                        <span className="good-green">TDD</span>
                     </Heading>
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        The rise of <span className="good-green">ORM</span>
+                        <span className="good-green">ORM</span>
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        <span className="good-green">DDD</span>
                     </Heading>
                 </Slide>
                 <Slide>
@@ -372,10 +352,9 @@ export default class Presentation extends React.Component {
                     <Heading size={4} fit caps lineHeight={1}>
                         Middleware
                     </Heading>
-                    <Appear>
-                        <Text>We're doing HTTP stuff anyway</Text>
-                    </Appear>
+                    <Text>We're doing HTTP stuff anyway</Text>
                 </Slide>
+                <Slide bgImage={httpMiddlewareWorkflow}/>
                 <CodeSlide
                     lang="php"
                     code={require("raw-loader!./code-examples/framework/expressive/PurchaseAction.php")}
@@ -431,7 +410,6 @@ export default class Presentation extends React.Component {
                         { loc: [4, 5], note: "Want to write an API? Change this line." }
                     ]}
                 />
-                <Slide bgImage={httpMiddlewareWorkflow}/>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         What survived:
