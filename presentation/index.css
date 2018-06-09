@@ -23,3 +23,12 @@
     -webkit-text-stroke-width: 0.005em;
     -webkit-text-stroke-color: #000;
 }
+
+.crisp-image {
+    image-rendering: optimizeSpeed;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+}

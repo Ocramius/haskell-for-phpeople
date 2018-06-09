@@ -1,7 +1,7 @@
 // Import React
 import React from "react";
 // Import Spectacle Core tags
-import {Appear, BlockQuote, Cite, Code, Deck, Heading, List, ListItem, Quote, Slide, Text} from "spectacle";
+import {Appear, BlockQuote, Cite, Code, Deck, Heading, List, ListItem, Quote, Slide, Text, Image} from "spectacle";
 
 import CodeSlide from "spectacle-code-slide";
 
@@ -37,6 +37,18 @@ export default class Presentation extends React.Component {
         return (
             <Deck transition={["none"]} transitionDuration={0} theme={theme} progress="none">
                 <Slide>
+                    <Image src={require("../assets/title-slide-fwdays-2018.png")}/>
+                </Slide>
+                <Slide>
+                    <Image src={require("../assets/ocramius.gif")} width="30%" className="crisp-image"/>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        @Ocramius
+                    </Heading>
+                </Slide>
+                <Slide>
+                    <Image src={require("../assets/roave.svg")}/>
+                </Slide>
+                <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         2002, first website project
                     </Heading>
@@ -45,11 +57,6 @@ export default class Presentation extends React.Component {
                 <Slide bgImage={require("../assets/coyote-roadrunner.png")}>
                     <Heading size={4} fit caps lineHeight={1}>
                         {/* Our customer */}
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Unstructured code
                     </Heading>
                 </Slide>
                 <Slide bgColor={"#000"}>
