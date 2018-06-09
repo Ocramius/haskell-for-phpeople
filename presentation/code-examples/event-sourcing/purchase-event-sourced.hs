@@ -4,8 +4,8 @@ app = loadRequest
  |> onlyWithAuthentication
  |> onlyCoyotes
  |> onlyWithValidFormData
- |> formToCommand
- |> loadHistory
+ |> formToCommand PurchaseForm
+ |> loadHistory fromDb
  |> performPurchase
- |> storeNewHistory
+ |> storeNewHistory toDb
  |> newHistoryToResponse
