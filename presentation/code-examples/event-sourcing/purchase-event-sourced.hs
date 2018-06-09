@@ -1,6 +1,6 @@
 app :: => Request -> Response
 app = loadRequest
- |> route
+ |> route POST "/purchase"
  |> onlyWithAuthentication
  |> onlyCoyotes
  |> onlyWithValidFormData

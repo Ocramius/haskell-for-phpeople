@@ -104,7 +104,7 @@ export default class Presentation extends React.Component {
                     ]}
                 />
                 <Slide bgImage={require("../assets/lock-fail.jpg")}>
-                    <Heading size={4} fit caps lineHeight={1} className="stroke-text-black">
+                    <Heading size={4} fit caps lineHeight={1} className="stroke-text">
                         Security? What security?
                     </Heading>
                 </Slide>
@@ -114,9 +114,15 @@ export default class Presentation extends React.Component {
                     </Heading>
                 </Slide>
                 <Slide bgImage={require("../assets/safety-fail.jpg")}>
-                    <Heading size={4} fit caps lineHeight={1} className="stroke-text-black">
+                    <Heading size={4} fit caps lineHeight={1} className="stroke-text">
                         Gets the job done
                     </Heading>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        <Code>$GLOBALS</Code>
+                    </Heading>
+                    <Text>Getting things from "somewhere"</Text>
                 </Slide>
                 <CodeSlide
                     lang="php"
@@ -128,10 +134,11 @@ export default class Presentation extends React.Component {
                 />
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        <Code>$GLOBALS</Code>
+                        Helpers
                     </Heading>
-                    <Text>Getting things from "somewhere"</Text>
+                    <Text>(for transversal concerns)</Text>
                 </Slide>
+                <Slide/>
                 <Slide bgImage={require("../assets/mr-crabs-money-eyes.png")}>
                     <Heading size={4} fit caps lineHeight={1} textColor="white" className="stroke-text-black">
                         Clients will pay...
@@ -149,7 +156,7 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        Then came the first frameworks
+                        the first frameworks
                     </Heading>
                 </Slide>
                 <Slide bgImage={require("../assets/dr-evil-quotes.jpg")}>
@@ -225,7 +232,7 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        We still heavily rely on helpers
+                        We still heavily rely on <span class="good-orange">helpers</span>
                     </Heading>
                 </Slide>
                 <CodeSlide
@@ -350,6 +357,7 @@ export default class Presentation extends React.Component {
                         <span className="good-green">DDD</span>
                     </Heading>
                 </Slide>
+                <Slide/>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
                         Another evolution
@@ -418,15 +426,14 @@ export default class Presentation extends React.Component {
                     ]}
                 />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        What survived:
+                    <Heading size={6} fit caps lineHeight={1} className="stroke-text">
+                        <span className="good-orange">PSR-0</span> <span className="good-green">PSR-7</span> <span className="good-orange">PSR-11</span> <span className="good-green">PSR-15</span>
                     </Heading>
-                    <List>
-                        <ListItem>PSR-0</ListItem>
-                        <ListItem>PSR-7</ListItem>
-                        <ListItem>PSR-11</ListItem>
-                        <ListItem>PSR-15</ListItem>
-                    </List>
+                </Slide>
+                <Slide>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        Look ma! No framework!
+                    </Heading>
                 </Slide>
                 <Slide bgImage={require("../assets/destroy-the-framework.jpg")}>
                     <Heading size={6} fit caps lineHeight={1} className="stroke-text">
@@ -436,12 +443,6 @@ export default class Presentation extends React.Component {
                         <br/>
                         <span className="good-orange">framework</span>!
                     </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Fighting framework <span className="good-orange">coupling</span>
-                    </Heading>
-                    <Text>No framework in those middleware</Text>
                 </Slide>
                 <Slide bgImage={frameworkAsFrameWork} className="stroke-text">
                     <Heading size={5} fit caps lineHeight={1}>
@@ -462,14 +463,11 @@ export default class Presentation extends React.Component {
                         Pushing <span className="good-green">immutability</span>
                     </Heading>
                 </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Pushing <span className="good-green">value objects</span>
-                    </Heading>
-                </Slide>
                 <Slide bgImage={require("../assets/shapes-types.jpg")} className="stroke-text">
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">Typed</span>: values as <span className="good-green">value objects</span>
+                    <Heading size={6} fit caps lineHeight={1}>
+                        values as
+                        <br/>
+                        <span className="good-orange">value objects</span>
                     </Heading>
                 </Slide>
                 <CodeSlide
@@ -507,16 +505,25 @@ export default class Presentation extends React.Component {
                 </Slide>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        Pushing <span className="good-green">functional programming</span>
+                        <span className="good-green">functional programming</span>
                     </Heading>
                 </Slide>
                 <Slide>
                     <Text>
                         A class
                         with <Code>__construct</Code> and <Code>__invoke</Code> is
-                        a <span className="good-green">curried function</span>
+                        a <Appear><span className="good-green">curried function</span></Appear>
                     </Text>
                 </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 1] },
+                        { loc: [0, 2] }
+                    ]}
+                />
                 <CodeSlide
                     lang="php"
                     code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/RegisterUser.php")}
@@ -539,14 +546,6 @@ export default class Presentation extends React.Component {
                     showLineNumbers
                     ranges={[
                         { loc: [0, 14] }
-                    ]}
-                />
-                <CodeSlide
-                    lang="haskell"
-                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user.hs")}
-                    showLineNumbers={false}
-                    ranges={[
-                        { loc: [0, 2] }
                     ]}
                 />
                 <Slide>
@@ -572,6 +571,9 @@ export default class Presentation extends React.Component {
                     <Heading size={4} fit caps lineHeight={1}>
                         Death of <span className="good-orange">ORM</span>s?
                     </Heading>
+                </Slide>
+                <Slide>
+                    <Image src={require("../assets/pipe-all-the-things.jpg")}/>
                 </Slide>
                 <CodeSlide
                     lang="haskell"
