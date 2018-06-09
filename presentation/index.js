@@ -630,6 +630,14 @@ export default class Presentation extends React.Component {
                         What's the next jump?
                     </Heading>
                 </Slide>
+                <Slide>
+                    <Heading size={3} lineHeight={1}>
+                        @Ocramius
+                    </Heading>
+                    <Heading size={3} lineHeight={1}>
+                        @RoaveTeam
+                    </Heading>
+                </Slide>
             </Deck>
         );
     }
