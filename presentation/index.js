@@ -37,7 +37,9 @@ export default class Presentation extends React.Component {
         return (
             <Deck transition={["none"]} transitionDuration={0} theme={theme} progress="none">
                 <Slide>
-                    <Image src={require("../assets/title-slide-fwdays-2018.png")}/>
+                    <Heading size={4} fit caps lineHeight={1}>
+                        From Helpers to Middleware
+                    </Heading>
                 </Slide>
                 <Slide>
                     <Image src={require("../assets/ocramius.gif")} width="30%" className="crisp-image"/>
