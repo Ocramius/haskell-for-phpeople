@@ -27,18 +27,17 @@ const theme = createTheme({
     secondary: "Helvetica"
 });
 
-const douchebagHat = require("../assets/scumbag-steve-douchebag-hat.png");
-const httpMiddlewareWorkflow = require("../assets/http-middleworld.png");
-const frameworkAsFrameWork = require("../assets/framework-as-frame-work.jpg");
-const leapOfFaith = require("../assets/leap-of-faith.jpg");
-
 export default class Presentation extends React.Component {
     render() {
         return (
-            <Deck transition={["none"]} transitionDuration={0} theme={theme} progress="none">
+            <Deck transition={["none"]} transitionDuration={0} theme={theme} progress="none" controls={false}>
                 <Slide>
                     <Heading size={4} fit caps lineHeight={1}>
-                        From Helpers to Middleware
+                        <span className="good-orange">Haskell</span>
+                        <br/>
+                        for
+                        <br/>
+                        <span className="good-green">PHPeople</span>
                     </Heading>
                 </Slide>
                 <Slide>
@@ -50,587 +49,566 @@ export default class Presentation extends React.Component {
                 <Slide>
                     <Image src={require("../assets/roave.svg")}/>
                 </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        2002, first website project
-                    </Heading>
-                </Slide>
-                <Slide bgImage={require("../assets/acme-inc-services.png")}/>
-                <Slide bgImage={require("../assets/coyote-roadrunner.png")}>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        {/* Our customer */}
-                    </Heading>
-                </Slide>
-                <Slide bgColor={"#000"}>
-                    <Heading size={4} fit caps lineHeight={1} style={"color: red"}>
-                        WARNING
-                    </Heading>
-                    <Text textColor="white">The following content may contain elements that are not suitable for some
-                        audiences.</Text>
-                    <Text textColor="white">Accordingly, viewer discretion is advised </Text>
-                </Slide>
                 <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/primitive/register-globals.php")}
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/hello-world/hello-world.hs")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 8] },
-                        { loc: [6, 8], note: "Obviously." }
+                        { loc: [0, 4] }
                     ]}
                 />
+                <Slide>
+                    <Image src={require("../assets/Haskell-Logo.svg")}/>
+                </Slide>
+                <Slide>
+                    <Image src={require("../assets/HaskellBCurry.jpg")}/>
+                </Slide>
+                <Slide>
+                    Haskell 1.0, 1990
+                </Slide>
+                <Slide>
+                    committee-based, designed, specified
+                </Slide>
+                <Slide>
+                    Academia, for educational purposes
+                </Slide>
+                <Slide>
+                    Small user-base, can change language often
+                </Slide>
+                <Slide>
+                    Current: Haskell 2010
+                </Slide>
+                <Slide>
+                    (GHC Haskell)
+                </Slide>
+                <Slide>
+                    Functional language
+                </Slide>
+                <Slide>
+                    Pure functional language
+                </Slide>
+                <Slide>
+                    Non-strict pure functional language
+                </Slide>
+                <Slide>
+                    <strike>Non-strict</strike> Lazy pure functional language
+                </Slide>
+                <Slide>
+                    Mathematical syntax
+                </Slide>
+                <Slide>
+                    <Image src={require("../assets/list-comprehension.png")}/>
+                </Slide>
                 <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/primitive/purchase.php")}
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/mathematical-syntax/list-comprehension.hs")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [2, 22] },
-                        { loc: [1, 3], note: "Security" },
-                        { loc: [3, 7], note: "SQL skillz" },
-                        { loc: [3, 7], note: "Forgot `or die(mysql_error());`!" },
-                        { loc: [7, 9], note: "Input validation" },
-                        { loc: [9, 10] },
-                        { loc: [9, 10], note: "Imagine `$success = false;`!" },
-                        { loc: [10, 14] },
-                        { loc: [14, 19] }
+                        { loc: [0, 6] }
                     ]}
                 />
                 <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/primitive/purchase-output.php")}
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/mathematical-syntax/list-comprehension-matrix.hs")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 18] },
-                        { loc: [4, 5] },
-                        { loc: [4, 5], note: "A success can also not exist!" },
-                        { loc: [8, 9], note: "This is fine" }
+                        { loc: [0, 6] }
                     ]}
                 />
-                <Slide bgImage={require("../assets/lock-fail.jpg")}>
-                    <Heading size={4} fit caps lineHeight={1} className="stroke-text">
-                        Security? What security?
-                    </Heading>
+                <Slide>
+                    AST is much simpler than PHP though!
                 </Slide>
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Projects used to be "easy"
-                    </Heading>
-                </Slide>
-                <Slide bgImage={require("../assets/safety-fail.jpg")}>
-                    <Heading size={4} fit caps lineHeight={1} className="stroke-text">
-                        Gets the job done
-                    </Heading>
+                    Community posts are mostly "mumbo jumbo"
                 </Slide>
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <Code>$GLOBALS</Code>
-                    </Heading>
-                    <Text>Getting things from "somewhere"</Text>
+                    "A monad is a monoid in the category of endofunctors"
+                </Slide>
+                <Slide>
+                    "If it compiles, it runs"
+                </Slide>
+                <Slide>
+                    Bad reputation of "hard to learn"
+                </Slide>
+                <Slide>
+                    Let's debunk that.
+                </Slide>
+                <Slide>
+                    Functions
                 </Slide>
                 <CodeSlide
                     lang="php"
-                    code={require("raw-loader!./code-examples/primitive/register-globals.php")}
+                    code={require("raw-loader!./code-examples/functions/add-two-numbers.php")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [1, 3], note: "The birth of helpers" }
+                        { loc: [0, 6] }
                     ]}
                 />
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Helpers
-                    </Heading>
-                    <Text>(for transversal concerns)</Text>
-                </Slide>
-                <Slide/>
-                <Slide bgImage={require("../assets/mr-crabs-money-eyes.png")}>
-                    <Heading size={4} fit caps lineHeight={1} textColor="white" className="stroke-text-black">
-                        Clients will pay...
-                    </Heading>
-                </Slide>
-                <Slide bgImage={require("../assets/customer-rewrite.jpg")} className="stroke-text-black">
-                    <Heading size={4} fit caps lineHeight={1} textColor="white">
-                        ...for a rewrite
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Few years later...
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        the first frameworks
-                    </Heading>
-                </Slide>
-                <Slide bgImage={require("../assets/dr-evil-quotes.jpg")}>
-                    <Heading size={5} fit caps lineHeight={1} className="stroke-text">
-                        Framework authors<br/>"know" what they do
-                    </Heading>
-                </Slide>
-
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Concerns being separated
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        MVC
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        MVC-ish
-                    </Heading>
-                    <Text>MVC over HTTP is not really a thing</Text>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Controllers
-                    </Heading>
-                </Slide>
-
                 <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/framework/zf1/controller.php")}
-                    showLineNumbers
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/add-two-numbers.hs")}
+                    showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 26] },
-                        { loc: [0, 4], note: "Always extend from the framework" },
-                        { loc: [0, 4], note: "(for maximum coupling)" },
-                        { loc: [4, 5], note: "Our action has a name!" },
-                        { loc: [6, 9], note: "(some) security!" },
-                        { loc: [10, 17], note: "Data validation, done properly" },
-                        { loc: [18, 20], note: "Database abstractions" },
-                        { loc: [23, 24], note: "Rendering is done somewhere else" }
+                        { loc: [0, 3] },
+                        { loc: [2, 3], note: "We sum two numbers together" },
+                        { loc: [1, 2], note: "A type signature" },
+                        { loc: [1, 2], note: "2 parameters of type \"Int\" lead to a result of type \"Int\"" }
                     ]}
                 />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Progress!
-                    </Heading>
+                    Let's simplify that.
                 </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/add-two-numbers-without-type-signature.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
+                    ]}
+                />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Most basic security issues removed!
-                    </Heading>
-                    <List>
-                        <ListItem>
-                            <span className="good-green">escaping</span> =&gt;
-                            <span className="good-orange">XSS</span>
-                        </ListItem>
-                        <ListItem>
-                            <span className="good-green">form</span> =&gt; <span className="good-orange">validation</span>
-                        </ListItem>
-                        <ListItem>
-                            <span className="good-green">tokens</span> =&gt; <span className="good-orange">CSRF</span>
-                        </ListItem>
-                        <ListItem>
-                            <span className="good-green">DAL</span> =&gt; <span className="good-orange">SQL Injections</span>
-                        </ListItem>
-                        <ListItem>
-                            <span className="good-green">Mailer</span> =&gt; <span className="good-orange">SMTP Injections</span>
-                        </ListItem>
-                    </List>
+                    Types can be inferred.
                 </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/add-two-numbers-without-type-signature-output.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 4] }
+                    ]}
+                />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        We still heavily rely on <span class="good-orange">helpers</span>
-                    </Heading>
+                    Let's use it
                 </Slide>
                 <CodeSlide
                     lang="php"
-                    code={require("raw-loader!./code-examples/framework/zf1/base-controller.php")}
-                    showLineNumbers
+                    code={require("raw-loader!./code-examples/functions/call-add-two-numbers.php")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [2, 4] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/call-add-two-numbers.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/call-add-two-numbers-no-parentheses.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <Slide>
+                    Types!
+                </Slide>
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/type-mismatch/mixing-types.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 6] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="php"
+                    code={require("raw-loader!./code-examples/type-mismatch/mixing-types-error.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 8] }
+                    ]}
+                />
+                <Slide>
+                    Quiz:
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/a-function-with-only-one-possible-implementation-quiz.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2], note: "\"a\" is a type variable: means \"any type\"" },
+                        { loc: [0, 2], note: "This is only the type signature" },
+                        { loc: [0, 2], note: "How many implementations are possible?" }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/a-function-with-only-one-possible-implementation-quiz-solved.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2], note: "Only one possible implementation!" }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/a-function-with-only-no-possible-implementation-quiz.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2], note: "What about this one?" },
+                        { loc: [0, 2], note: "No possible implementation!" },
+                        { loc: [0, 2], note: "\"I give you apples, and I want potatoes!\"" }
+                    ]}
+                />
+                <Slide>
+                    Some functions
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/add-two-numbers-without-type-signature-output.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 4] }
+                    ]}
+                />
+                <Slide>
+                    What about constants?
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/constant-is-a-function.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <Slide>
+                    Operators are also functions
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/operators-are-functions.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] },
+                        { loc: [2, 4] },
+                        { loc: [4, 6] },
+                        { loc: [6, 8] },
+                        { loc: [8, 10] }
+                    ]}
+                />
+                <Slide>
+                    Variables?
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/error/shadowing-value.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 1] },
+                        { loc: [1, 2], note: "Works in repl" },
+                        { loc: [0, 7], note: "Repl complains - would fail compile" }
+                    ]}
+                />
+                <Slide>
+                    Errors
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/functions/error.txt")}
+                    showLineNumbers={false}
                     ranges={[
                         { loc: [0, 9] }
                     ]}
                 />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Registries
-                    </Heading>
-                    <Text>Not much better than globals...</Text>
+                    They can look damn complex, but you need to read them!
                 </Slide>
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Anyone recognize this?
-                    </Heading>
+                    A type is a restriction declaring that something belongs to a certain "set"
+                </Slide>
+                <Slide>
+                    Declaring new types
                 </Slide>
                 <CodeSlide
                     lang="php"
-                    code={require("raw-loader!./code-examples/framework/larval/facade.php")}
-                    showLineNumbers
+                    code={require("raw-loader!./code-examples/declaring-new-types/user-id.php")}
+                    showLineNumbers={false}
                     ranges={[
-                        { loc: [237, 256] }
-                    ]}
-                />
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Tip: it's not from 2007.
-                    </Heading>
-                </Slide>
-                <Slide bgImage={douchebagHat} className="stroke-text">
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Users:
-                    </Heading>
-                    <Text textColor="#ccc">LET'S PUT EVERYTHING IN A CONTROLLER!</Text>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Too much <span className="good-orange">coupling</span> with the framework
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Singleton <span className="good-green">framework kernel</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Forced <span className="good-green">0-argument constructors</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">Autoloading</span> as service-location
-                    </Heading>
-                </Slide>
-                <Slide bgImage={require("../assets/not-testable.jpg")} className="stroke-text">
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Testing
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Then we evolved again
-                    </Heading>
-                    <Text>Around 2011~2012</Text>
-                </Slide>
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/framework/zf2/controller.php")}
-                    showLineNumbers
-                    ranges={[
-                        { loc: [0, 48] },
-                        { loc: [4, 14], note: "Make the implicit explicit" },
-                        { loc: [15, 28], note: "Services built before runtime" },
-                        { loc: [29, 47], note: "Statically analysable code" },
-                        { loc: [29, 47], note: "Testable code" },
-                        { loc: [29, 47], note: "No magic" },
-                    ]}
-                />
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Progress!
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Still a lot of framework <span className="good-orange">coupling</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">Upgrade</span> = <span className="good-orange">rewrite</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        The rise of...
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">DI</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">TDD</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">ORM</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">DDD</span>
-                    </Heading>
-                </Slide>
-                <Slide/>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Another evolution
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Middleware
-                    </Heading>
-                    <Text>We're doing HTTP stuff anyway</Text>
-                </Slide>
-                <Slide bgImage={httpMiddlewareWorkflow}/>
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/framework/expressive/PurchaseAction.php")}
-                    showLineNumbers
-                    ranges={[
-                        { loc: [0, 34] },
-                        { loc: [21, 22], note: "Request in, response out" },
-                        { loc: [21, 33], note: "Just the actual action" },
-                    ]}
-                />
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/framework/expressive/OnlyCoyotes.php")}
-                    showLineNumbers
-                    ranges={[
-                        { loc: [0, 28] },
-                        { loc: [18, 24], note: "Intercept only when needed" },
-                        { loc: [25, 26], note: "Delegate everything else" },
-                    ]}
-                />
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/framework/expressive/OnlyAuthenticated.php")}
-                    showLineNumbers
-                    ranges={[
-                        { loc: [0, 33] },
-                        { loc: [17, 32] }
-                    ]}
-                />
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/framework/expressive/OnlyWithValidFormData.php")}
-                    showLineNumbers
-                    ranges={[
-                        { loc: [0, 29] },
-                        { loc: [15, 28] }
-                    ]}
-                />
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/framework/expressive/pipeline.php")}
-                    showLineNumbers
-                    ranges={[
-                        { loc: [0, 8] }
+                        { loc: [0, 29] }
                     ]}
                 />
                 <CodeSlide
                     lang="haskell"
-                    code={require("raw-loader!./code-examples/framework/expressive/pipeline.hs")}
+                    code={require("raw-loader!./code-examples/declaring-new-types/user-id.hs")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 6] },
-                        { loc: [4, 5], note: "Want to write an API? Change this line." }
+                        { loc: [0, 1], note: "\"UserId\" can be constructed as \"UserId\" with an \"Int\"" },
+                        { loc: [0, 10] }
                     ]}
                 />
                 <Slide>
-                    <Heading size={6} fit caps lineHeight={1} className="stroke-text">
-                        <span className="good-orange">PSR-0</span> <span className="good-green">PSR-7</span> <span className="good-orange">PSR-11</span> <span className="good-green">PSR-15</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Look ma! No framework!
-                    </Heading>
-                </Slide>
-                <Slide bgImage={require("../assets/destroy-the-framework.jpg")}>
-                    <Heading size={6} fit caps lineHeight={1} className="stroke-text">
-                        Kill
-                        <br/>
-                        the
-                        <br/>
-                        <span className="good-orange">framework</span>!
-                    </Heading>
-                </Slide>
-                <Slide bgImage={frameworkAsFrameWork} className="stroke-text">
-                    <Heading size={5} fit caps lineHeight={1}>
-                        "<span className="good-orange">Framework</span>"
-                        <br/>
-                        back to
-                        <br/>
-                        "<span className="good-green">Frame</span>" "<span className="good-green">work</span>"
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Reduce the <span className="good-green">risk</span> of another <span className="good-orange">rewrite</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Pushing <span className="good-green">immutability</span>
-                    </Heading>
-                </Slide>
-                <Slide bgImage={require("../assets/shapes-types.jpg")} className="stroke-text">
-                    <Heading size={6} fit caps lineHeight={1}>
-                        values as
-                        <br/>
-                        <span className="good-orange">value objects</span>
-                    </Heading>
-                </Slide>
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/value-object/UserId.php")}
-                    showLineNumbers={false}
-                    ranges={[
-                        { loc: [0, 22] },
-                        { loc: [11, 12], note: "Invariants encapsulated" }
-                    ]}
-                />
-                <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/value-object/check_password.php")}
-                    showLineNumbers={false}
-                    ranges={[
-                        { loc: [0, 8] },
-                    ]}
-                />
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-orange">Static</span> <span className="good-green">analysis</span>
-                    </Heading>
-                    <Text>
-                        PHPStan, Psalm, Exakat...
-                    </Text>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Maybe <span className="good-green">generics</span>?
-                    </Heading>
-                    <Appear>
-                        <Text>See what I did there?</Text>
-                    </Appear>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">functional programming</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Text>
-                        A class
-                        with <Code>__construct</Code> and <Code>__invoke</Code> is
-                        a <Appear><span className="good-green">curried function</span></Appear>
-                    </Text>
+                    WTF is "Maybe"?
                 </Slide>
                 <CodeSlide
                     lang="haskell"
-                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user.hs")}
+                    code={require("raw-loader!./code-examples/declaring-new-types/what-is-maybe.hs")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 1] },
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <Slide>
+                    We can do better.
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/declaring-new-types/user-id-natural.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 10] }
+                    ]}
+                />
+                <Slide>
+                    <Image src={require("../assets/we-need-to-go-deeper.jpg")}/>
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/declaring-new-types/user-id-non-zero-natural.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 10] }
+                    ]}
+                />
+                <Slide>
+                    Make runtime errors type declarations!
+                </Slide>
+                <Slide>
+                    Collections
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/collections/defining-a-collection.hs")}
+                    showLineNumbers={false}
+                    ranges={[
                         { loc: [0, 2] }
                     ]}
                 />
                 <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/RegisterUser.php")}
-                    showLineNumbers
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/collections/defining-a-range-collection.hs")}
+                    showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 14] }
+                        { loc: [0, 2] }
                     ]}
                 />
                 <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user.php")}
-                    showLineNumbers
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/collections/counting-a-collection-length.hs")}
+                    showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 14] }
+                        { loc: [0, 2] }
                     ]}
                 />
                 <CodeSlide
-                    lang="php"
-                    code={require("raw-loader!./code-examples/functional-classes-are-curried-functions/register_user_curried.php")}
-                    showLineNumbers
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/collections/type-of-length.txt")}
+                    showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 14] }
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/collections/counting-a-collection-foldl.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/collections/type-of-foldl.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
                     ]}
                 />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Pushing <span className="good-green">functional patterns</span> to the <span className="good-orange">storage</span>
-                    </Heading>
-                </Slide>
-                <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        <span className="good-green">Event Sourcing</span>
-                    </Heading>
+                    Quicksort
                 </Slide>
                 <CodeSlide
                     lang="haskell"
-                    code={require("raw-loader!./code-examples/event-sourcing/event-sourcing.hs")}
+                    code={require("raw-loader!./code-examples/collections/quicksort.hs")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 1] },
-                        { loc: [0, 5] }
+                        { loc: [0, 6] },
+                        { loc: [2, 4], note: "\"where\" is defining local scope" },
+                        { loc: [1, 2], note: "\"(x:xs)\" is pattern matching" }
                     ]}
                 />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        Death of <span className="good-orange">ORM</span>s?
-                    </Heading>
+                    Type classes
                 </Slide>
                 <Slide>
-                    <Image src={require("../assets/pipe-all-the-things.jpg")}/>
+                    Type => "belongs" to a "set"
+                </Slide>
+                <Slide>
+                    Classes?
+                </Slide>
+                <Slide>
+                    Type class => type satisfies a property
+                </Slide>
+                <Slide>
+                    "Sortable" is a property
                 </Slide>
                 <CodeSlide
                     lang="haskell"
-                    code={require("raw-loader!./code-examples/event-sourcing/purchase-event-sourced.hs")}
+                    code={require("raw-loader!./code-examples/type-classes/ord.txt")}
                     showLineNumbers={false}
                     ranges={[
-                        { loc: [0, 11] },
-                        { loc: [0, 1], note: "This is an HTTP application" },
-                        { loc: [2, 4], note: "Data flows from one function to the next" },
-                        { loc: [3, 5], note: "Data flows from one function to the next" },
-                        { loc: [4, 6], note: "Data flows from one function to the next" },
-                        { loc: [5, 7], note: "Data flows from one function to the next" },
-                        { loc: [6, 8], note: "Data flows from one function to the next" },
-                        { loc: [7, 9], note: "Data flows from one function to the next" },
-                        { loc: [8, 10], note: "Data flows from one function to the next" },
-                        { loc: [9, 11], note: "Data flows from one function to the next" },
+                        { loc: [0, 9] },
+                        { loc: [9, 12], note: "GHC says this is the \"minimal\" property" }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/type-classes/pizza.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 1], note: "No, Hawaii is not pizza" },
+                        { loc: [1, 7], note: "Pizza satisfies the property \"Eq\"" },
+                        { loc: [8, 15], note: "Pizza satisfies the property \"Ord\"" }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/type-classes/sort-pizza.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 1] }
                     ]}
                 />
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        No more <span className="good-orange">service location</span>
+                    (Many properties can be derived)
+                </Slide>
+                <Slide>
+                    Laziness
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/laziness/pick-from-infinite-collection.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 1] }
+                    ]}
+                />
+                <Slide>
+                    Laziness is sometimes tricky
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/laziness/which-exception.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 7] },
+                        { loc: [0, 6], note: "a and b are lies."},
+                        { loc: [6, 7], note: "Which exception will be thrown?" }
+                    ]}
+                />
+                <Slide>
+                    The IO Monad
+                </Slide>
+                <Slide>
+                    (it's a type class)
+                </Slide>
+                <Slide>
+                    It has the property of "binding"
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/monad/promise-analogy.php")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 20] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/monad/promise-analogy.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 20] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/monad/promise-analogy-desugared.hs")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 20], note: "The compiler will turn it into callback hell" }
+                    ]}
+                />
+                <Slide>
+                    <ul>
+                        <li>promise</li>
+                        <li>try-catch</li>
+                        <li>async-await</li>
+                        <li>optional</li>
+                        <li>threads</li>
+                        <li>locking</li>
+                        <li>collections</li>
+                    </ul>
+                </Slide>
+                <Slide>
+                    Good when things depend on each other
+                </Slide>
+                <Slide>
+                    Write imperative code in a functionally pure language
+                </Slide>
+                <Slide>
+                    Haskell has a bad legacy library
+                </Slide>
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/broken-prelude/head.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 2] }
+                    ]}
+                />
+                <CodeSlide
+                    lang="haskell"
+                    code={require("raw-loader!./code-examples/broken-prelude/head-error.txt")}
+                    showLineNumbers={false}
+                    ranges={[
+                        { loc: [0, 5], note: "Exceptions in haskell are bad, and nobody uses them" }
+                    ]}
+                />
+                <Slide>
+                    Fortunately, there are replacements for the standard library
+                </Slide>
+                <Slide>
+                    <Heading>
+                        Why haskell?
                     </Heading>
                 </Slide>
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        No more <span className="good-orange">helpers</span>
+                    <Heading>
+                        WHY?!
                     </Heading>
                 </Slide>
                 <Slide>
-                    <Heading size={5} fit caps lineHeight={1}>
-                        <span className="good-orange">cross-cutting concerns</span>
-                        <br/>
-                        become
-                        <br/>
-                        <span className="good-green">function composition</span>
-                    </Heading>
-                    <Appear>
-                        <Text>Most if/else is gone or isolated!</Text>
-                    </Appear>
+                    Learn to think in FP
                 </Slide>
                 <Slide>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        No more <span className="good-orange">shared mutable state</span>
-                    </Heading>
+                    Learn to think in Types
                 </Slide>
                 <Slide>
-                    <BlockQuote>
-                        <Quote textColor="#000">Good object oriented programming is functional programming</Quote>
-                        <Cite>Anthony Ferrara</Cite>
-                    </BlockQuote>
+                    Performance
                 </Slide>
-                <Slide bgImage={leapOfFaith}>
-                    <Heading size={4} fit caps lineHeight={1}>
-                        What's the next jump?
-                    </Heading>
+                <Slide>
+                    Performance (holy shit!)
+                </Slide>
+                <Slide>
+                    Stability
+                </Slide>
+                <Slide>
+                    "Correct" programs
                 </Slide>
                 <Slide>
                     <Heading size={3} lineHeight={1}>

@@ -1,0 +1,2 @@
+Prelude> :t length
+length :: Foldable t => t a -> Int

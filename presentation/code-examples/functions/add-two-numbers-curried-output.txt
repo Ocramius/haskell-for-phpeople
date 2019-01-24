@@ -1,0 +1,3 @@
+Prelude> addTwoNumbers x y = x + y
+Prelude> :t addTwoNumbers 5
+addTwoNumbers 5 :: Num a => a -> a

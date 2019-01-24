@@ -1,0 +1,9 @@
+Prelude> :t print addTwoNumbers 1 2
+
+<interactive>:1:1: error:
+    • Couldn't match expected type ‘Integer -> Integer -> t’
+                  with actual type ‘IO ()’
+    • The function ‘print’ is applied to three arguments,
+      but its type ‘(Integer -> Integer -> Integer) -> IO ()’
+      has only one
+      In the expression: print addTwoNumbers 1 2

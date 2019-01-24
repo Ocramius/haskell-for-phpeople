@@ -1,0 +1,10 @@
+Prelude> :t (+)
+(+) :: Num a => a -> a -> a
+Prelude> :t (*)
+(*) :: Num a => a -> a -> a
+Prelude> :t (/)
+(/) :: Fractional a => a -> a -> a
+Prelude> :t ($)
+($) :: (a -> b) -> a -> b
+Prelude> :t (.)
+(.) :: (b -> c) -> (a -> b) -> a -> c

@@ -1,0 +1,7 @@
+Prelude> "hello" == 1
+
+<interactive>:22:12: error:
+    • No instance for (Num [Char]) arising from the literal ‘1’
+    • In the second argument of ‘(==)’, namely ‘1’
+      In the expression: "hello" == 1
+      In an equation for ‘it’: it = "hello" == 1
